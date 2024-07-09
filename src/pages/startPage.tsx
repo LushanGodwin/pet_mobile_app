@@ -1,7 +1,19 @@
 import { Image, StyleSheet, View ,Text} from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { ParamListBase } from "@react-navigation/native";
 
 export default function StartPage(){
+    const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+    useEffect(() => {
+        
+        // Simulate a delay to show loading page for 3 seconds
+        setTimeout(() => {
+            // Navigate to main screen after 6 seconds
+            navigation.navigate('Dashboard');
+        }, 6000);
+    },[])
     return(
         <>
         <View style={framContainer.fullPageContainer}>

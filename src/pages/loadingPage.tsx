@@ -1,7 +1,21 @@
 import { Image, StyleSheet, View } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { ParamListBase } from "@react-navigation/native";
 
 export default function LoadingPage(){
+    const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+    useEffect(() => {
+        
+        // Simulate a delay to show loading page for 3 seconds
+        setTimeout(() => {
+            // Navigate to main screen after 3 seconds
+            navigation.navigate('Start');
+        }, 3000);
+    },[])
+
+
     return (
         <>
         <View style={styles.container}>
@@ -9,9 +23,6 @@ export default function LoadingPage(){
                 <Image source={require('../images/loading.png')} />
             </View>
         </View>
-            
-
-        
         </>
     )
 }
