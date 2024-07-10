@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import LoadingPage from './src/pages/loadingPage';
-import StartPage from './src/pages/startPage';
+import LoadingPage from './src/screen/loadingPage';
+import StartPage from './src/screen/startPage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import DashboardPage from './src/pages/dashboardPage';
+import DashboardPage from './src/screen/dashboardPage';
 import Header from './src/component/header';
+import TabNavigation from './src/component/TabNavigation';
 
 
 
@@ -16,9 +17,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Loading">
-        <Stack.Screen name="Loading" component={LoadingPage} />
-        <Stack.Screen name="Start" component={StartPage} />
-        <Stack.Screen name="Dashboard" component={DashboardPage} options={{
+        <Stack.Screen name="Loading" component={LoadingPage} options={{headerShown: false}}/>
+        <Stack.Screen name="Start" component={StartPage}options={{headerShown: false}} />
+        <Stack.Screen name="TabNavigation" component={TabNavigation} options={{
           header: () => <Header/>
         }} />
       </Stack.Navigator>
