@@ -5,6 +5,7 @@ import StartPage from './src/pages/startPage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DashboardPage from './src/pages/dashboardPage';
+import Header from './src/component/header';
 
 
 
@@ -17,7 +18,9 @@ export default function App() {
       <Stack.Navigator initialRouteName="Loading">
         <Stack.Screen name="Loading" component={LoadingPage} />
         <Stack.Screen name="Start" component={StartPage} />
-        <Stack.Screen name="Dashboard" component={DashboardPage} />
+        <Stack.Screen name="Dashboard" component={DashboardPage} options={{
+          header: () => <Header/>
+        }} />
       </Stack.Navigator>
     </NavigationContainer>
      
