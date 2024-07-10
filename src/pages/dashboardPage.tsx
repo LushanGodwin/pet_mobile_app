@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Alert } from 'react-native';
+import { View, StyleSheet, Alert, ScrollView } from 'react-native';
 import Card from '../component/card';
 
 export default function DashboardPage() {
@@ -8,7 +8,8 @@ export default function DashboardPage() {
     };
 
     return (
-        <View style={styles.container}>
+        <ScrollView>
+<View style={styles.container}>
                 <Card
                     imageSource={require('../images/dog.png')}
                     buttonText="Read More"
@@ -29,7 +30,19 @@ export default function DashboardPage() {
                     buttonText="Read More"
                     onButtonPress={handleButtonPress}
                 />
+                <Card
+                    imageSource={require('../images/dog3.png')}
+                    buttonText="Read More"
+                    onButtonPress={handleButtonPress}
+                />
+                <Card
+                    imageSource={require('../images/dog3.png')}
+                    buttonText="Read More"
+                    onButtonPress={handleButtonPress}
+                />
         </View>
+        </ScrollView>
+        
     );
 }
 

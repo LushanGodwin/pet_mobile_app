@@ -10,7 +10,7 @@ export default function LoadingPage(){
         
         // Simulate a delay to show loading page for 3 seconds
         setTimeout(() => {
-            // Navigate to main screen after 3 seconds
+            // Navigate to start screen after 3 seconds
             navigation.navigate('Start');
         }, 3000);
     },[])
