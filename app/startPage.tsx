@@ -6,7 +6,7 @@ import { router } from "expo-router";
 export default function StartPage(){
     useEffect(() => {
         setTimeout(() => {
-            router.push('/(tabs)/(home)')
+            router.push('/(tabs)/')
         }, 6000);
     },[])
     return(
