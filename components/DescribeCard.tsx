@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-const DescribeCard = ({ imageSource, description }) => {
+const DescribeCard = ( props:any ) => {
   return (
-        <View style={styles.card}>
-          <Image source={imageSource} style={styles.cardImage} />
-          <Text style={styles.cardText}>{description}</Text>
+        <View style={styles.card} id={props.id}>
+          <Image source={props.imageSource} style={styles.cardImage} />
+          <Text style={styles.cardText}>{props.description}</Text>
         </View>
     );
 };
