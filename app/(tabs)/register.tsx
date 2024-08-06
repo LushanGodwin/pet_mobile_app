@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet, ScrollView, Alert, Touchable
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function register(){
-    const [dogName, setDogName] = useState('');
+  const [dogName, setDogName] = useState('');
   const [breed, setBreed] = useState('');
   const [age, setAge] = useState('');
   const [ownerName, setOwnerName] = useState('');
